@@ -2,13 +2,6 @@ package com.bl.addressbook;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-/**
- * Purpose - To create an Address Book System
- * @author Sakshi Shetty
- * @version 16.0
- * @since 2021-08-12
- */
-
 public class AddressBookMain {
     ArrayList<Contacts> arrayDetails = new ArrayList<Contacts>();
     static Scanner sc = new Scanner(System.in);
