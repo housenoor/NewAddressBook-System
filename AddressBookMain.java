@@ -46,6 +46,10 @@ public class AddressBookMain {
 				System.out.println("Welcome to the search option:");
 				addressBook.searchByOptions();
 			case 5:
+				System.out.println("Welcome to view By Option:");
+				addressBook.viewByOption(addressBookMap);
+				break;
+			case 6:
 				sc.close();// for closing the programme
 				return;
 			default:
