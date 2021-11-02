@@ -195,11 +195,9 @@ public class AddressBookMain {
 					hashmap.put(address_name, arrayDetails);
 					System.out.println(hashmap);
 				}
-				break;
+				
 
-			
-
-			case 3:
+			case 2:
 				System.out.println(hashmap);
 				break;
 
