@@ -5,13 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * purpose - To create Address Book Declaring Main method Here
- *
- * @author Sunil
- * @version 16.0
- * @since 12/08/2021
- */
+
 public class addressBookMain {
 	public static Map<String, addressBook> addressBookHashMap = new HashMap<>();
 	Scanner sc = new Scanner(System.in);
