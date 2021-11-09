@@ -5,6 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * purpose - To create Address Book Declaring Main method Here
+ *
+ * @author Sunil
+ * @version 16.0
+ * @since 12/08/2021
+ */
 public class addressBookMain {
 	public static Map<String, addressBook> addressBookHashMap = new HashMap<>();
 	Scanner sc = new Scanner(System.in);
@@ -53,6 +60,10 @@ public class addressBookMain {
 		System.out.println("ADDRESS BOOK :--->" + addressBookHashMap);
 	}
 
+	/*
+	 * Declaring Main method Here Displaying The Options With Switch Case And
+	 * Printing The Contact Details
+	 */
 	public static void main(String[] args) {
 		System.out.println(" Welcome To AddressBook System ");
 		Scanner scanner = new Scanner(System.in);
@@ -93,10 +104,10 @@ public class addressBookMain {
 				}
 				break;
 			case 4:
-				System.out.println(Collections.singletonList(addressBookHashMap));
-				for (Map.Entry<String, addressBook> entry : addressBookHashMap.entrySet()) {
-					System.out.println(entry.getKey() + entry.getValue().getAddressBook());
-				}
+				System.out.println("Enter CityName , First Name you want to search:");
+				String cityName = scanner.next();
+				String firstName = scanner.next();
+				searchPersonByCity(cityName, firstName);
 				break;
 
 			case 5:
@@ -110,11 +121,24 @@ public class addressBookMain {
 				System.out.println("Enter The Name Of City Of Contact");
 				String cityName1 = scanner.next();
 				viewPersonByCity(cityName1);
+				break;
+			case 7:
+				System.out.println("Enter The Name Of City");
+				String cityName2 = scanner.next();
+				countContactsByUsingCity(cityName2);
 			}
-		} while (choice != 7);
+		} while (choice != 8);
+	}
+
+	private static void searchPersonByCity(String cityName, String firstName) {
+
 	}
 
 	private static void viewPersonByCity(String cityName1) {
+
+	}
+
+	private static void countContactsByUsingCity(String cityName2) {
 
 	}
 

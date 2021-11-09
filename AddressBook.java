@@ -20,10 +20,6 @@ public class addressBook {
 
 	static ArrayList<contactDetails> contactList = new ArrayList<>();
 
-	/*
-	 * Declaring check Duplicate Entry Method Checking For Duplicate Entries By
-	 * Using Boolean Type
-	 */
 	public boolean checkDuplicateEntry(contactDetails contact) {
 		boolean check = false;
 		for (contactDetails duplicateEntry : contactList) {
@@ -61,10 +57,17 @@ public class addressBook {
 		}
 	}
 
-	/*
-	 * Declaring The Add Contact Method If Duplicate Entry Is Possible It Prints
-	 * Person Already Exists And Printing The Contact Details Of Person
-	 */
+	
+	public static void countContactsByUsingCity(String cityName2) {
+		long count = 0;
+		long count1 = contactList.stream().filter(g -> g.getAddressCity().equalsIgnoreCase(cityName2)).count();
+		for (contactDetails contact : contactList) {
+			count1 += count;
+		}
+		System.out.println("Contact List :" + count1);
+
+	}
+
 	public boolean addContact(contactDetails contact) {
 		boolean entryCheck = checkDuplicateEntry(contact);
 		if (!entryCheck) {
@@ -77,12 +80,7 @@ public class addressBook {
 		return true;
 	}
 
-	/*
-	 * Declaring The Edit Contact Method TO Edit The Details Of Contact The Details
-	 * Of Contact Edit By Using FirstName If First Name Is Match The Contact Will
-	 * Edit
-	 */
-	public void editContact(String firstName) {
+		public void editContact(String firstName) {
 		System.out.println(" Enter the first name of the contact : ");
 		String checkName;
 		Integer choice;

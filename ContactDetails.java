@@ -1,101 +1,108 @@
 package com.bl.addressbook;
 
 public class contactDetails {
+    //variable Declaration
+    private String firstName;
+    private String lastName;
+    private String addressCity;
+    private String state;
+    private String email;
+    private String zip;
+    private String phoneNumber;
 
-	private String firstName;
-	private String lastName;
-	private String addressCity;
-	private String state;
-	private String email;
-	private String zip;
-	private String phoneNumber;
+    /*
+    Declaring The Parametrised Constructor
+    To Initialise The Parameters
+     */
+    contactDetails(String firstName, String lastName, String addressCity, String state, String email, String zip, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.addressCity = addressCity;
+        this.state = state;
+        this.email = email;
+        this.zip = zip;
+        this.phoneNumber = phoneNumber;
+    }
 
-	// Declaring The Parametrised Constructor
+    public String getFirstName() {
 
-	contactDetails(String firstName, String lastName, String addressCity, String state, String email, String zip,
-			String phoneNumber) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.addressCity = addressCity;
-		this.state = state;
-		this.email = email;
-		this.zip = zip;
-		this.phoneNumber = phoneNumber;
-	}
+        return firstName;
+    }
 
-	public String getFirstName() {
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-		return firstName;
-	}
+    public String getLastName() {
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+        return lastName;
+    }
 
-	public String getLastName() {
+    public void setLastName(String lastName) {
 
-		return lastName;
-	}
+        this.lastName = lastName;
+    }
 
-	public void setLastName(String lastName) {
+    public String getAddressCity() {
+        return addressCity;
+    }
 
-		this.lastName = lastName;
-	}
+    public void setAddressCity(String addressCity) {
+        this.addressCity = addressCity;
+    }
 
-	public String getAddressCity() {
-		return addressCity;
-	}
+    public String getState() {
 
-	public void setAddressCity(String addressCity) {
-		this.addressCity = addressCity;
-	}
+        return state;
+    }
 
-	public String getState() {
+    public void setState(String state) {
 
-		return state;
-	}
+        this.state = state;
+    }
 
-	public void setState(String state) {
+    public String getEmail() {
 
-		this.state = state;
-	}
+        return email;
+    }
 
-	public String getEmail() {
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-		return email;
-	}
+    public String getZip() {
+        return zip;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setZip(String zip) {
 
-	public String getZip() {
-		return zip;
-	}
+        this.zip = zip;
+    }
 
-	public void setZip(String zip) {
+    public String getPhoneNumber() {
 
-		this.zip = zip;
-	}
+        return phoneNumber;
+    }
 
-	public String getPhoneNumber() {
+    public void setPhoneNumber(String phoneNumber) {
 
-		return phoneNumber;
-	}
+        this.phoneNumber = phoneNumber;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-
-		this.phoneNumber = phoneNumber;
-	}
-
-	/*
-	 * Declaring The To String Method The toString() method returns the string
-	 * representation of the object
-	 */
-	@Override
-	public String toString() {
-		return "ContactDetails{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\''
-				+ ", addressCity='" + addressCity + '\'' + ", state='" + state + '\'' + ", email='" + email + '\''
-				+ ", zip=" + zip + ", phoneNumber=" + phoneNumber + '}';
-	}
+    /*
+Declaring The To String Method
+The toString() method returns the string representation of the object
+ */
+    @Override
+    public String toString() {
+        return "ContactDetails{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", addressCity='" + addressCity + '\'' +
+                ", state='" + state + '\'' +
+                ", email='" + email + '\'' +
+                ", zip=" + zip +
+                ", phoneNumber=" + phoneNumber +
+                '}';
+    }
 }
