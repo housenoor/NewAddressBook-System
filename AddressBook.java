@@ -10,11 +10,6 @@ public class addressBook {
 	public String name;
 	Scanner sc = new Scanner(System.in);
 
-	/*
-	 * Declaring The Add Contact Method And Entering The Contact Details By Using
-	 * Scanner Class
-	 */
-
 	public addressBook(String name) {
 		this.name = name;
 	}
@@ -25,6 +20,10 @@ public class addressBook {
 
 	static ArrayList<contactDetails> contactList = new ArrayList<>();
 
+	/*
+	 * Declaring check Duplicate Entry Method Checking For Duplicate Entries By
+	 * Using Boolean Type
+	 */
 	public boolean checkDuplicateEntry(contactDetails contact) {
 		boolean check = false;
 		for (contactDetails duplicateEntry : contactList) {
@@ -37,9 +36,10 @@ public class addressBook {
 		return check;
 	}
 
-	// Declaring Search Person By City And FirstName Using Java Streams To Search By
-	// using CityName And FirstName
-
+	/*
+	 * Declaring Search Person By City And FirstName Using Java Streams To Search By
+	 * using CityName And FirstName
+	 */
 	public static void searchPersonByCity(String cityName, String firstName) {
 		List<contactDetails> personList = contactList.stream()
 				.filter(p -> p.getAddressCity().equalsIgnoreCase(cityName))
@@ -49,9 +49,22 @@ public class addressBook {
 		}
 	}
 
-	// Declaring The Add Contact Method and  if Duplicate Entry is Possible It Prints
-	// Person Already Exists And Printing The Contact Details Of Person
+	/*
+	 * Declaring The View Person Method By City Name Using Java Streams To View
+	 * Contact By using City Name
+	 */
+	public static void viewPersonByCity(String cityName1) {
+		List<contactDetails> list = contactList.stream().filter(g -> g.getAddressCity().equalsIgnoreCase(cityName1))
+				.collect(Collectors.toList());
+		for (contactDetails contact : list) {
+			System.out.println("Contact List :" + contact);
+		}
+	}
 
+	/*
+	 * Declaring The Add Contact Method If Duplicate Entry Is Possible It Prints
+	 * Person Already Exists And Printing The Contact Details Of Person
+	 */
 	public boolean addContact(contactDetails contact) {
 		boolean entryCheck = checkDuplicateEntry(contact);
 		if (!entryCheck) {
@@ -64,8 +77,11 @@ public class addressBook {
 		return true;
 	}
 
-	// Contact Edit By Using FirstName If First Name Is Match The Contact Will edit
-
+	/*
+	 * Declaring The Edit Contact Method TO Edit The Details Of Contact The Details
+	 * Of Contact Edit By Using FirstName If First Name Is Match The Contact Will
+	 * Edit
+	 */
 	public void editContact(String firstName) {
 		System.out.println(" Enter the first name of the contact : ");
 		String checkName;
@@ -131,6 +147,10 @@ public class addressBook {
 		}
 	}
 
+	/*
+	 * Declaring The Delete Contact Method TO Details The Details Of Contact The
+	 * Details Of Contact Delete By Using FirstName
+	 */
 	public void deleteContact(String firstName) {
 		String checkName2;
 		for (contactDetails contact : contactList) {

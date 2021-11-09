@@ -98,7 +98,24 @@ public class addressBookMain {
 					System.out.println(entry.getKey() + entry.getValue().getAddressBook());
 				}
 				break;
+
+			case 5:
+				System.out.println(Collections.singletonList(addressBookHashMap));
+				for (Map.Entry<String, addressBook> entry : addressBookHashMap.entrySet()) {
+					System.out.println(entry.getKey() + entry.getValue().getAddressBook());
+				}
+				break;
+
+			case 6:
+				System.out.println("Enter The Name Of City Of Contact");
+				String cityName1 = scanner.next();
+				viewPersonByCity(cityName1);
 			}
-		} while (choice != 5);
+		} while (choice != 7);
 	}
+
+	private static void viewPersonByCity(String cityName1) {
+
+	}
+
 }
