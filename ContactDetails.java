@@ -1,24 +1,30 @@
 package com.bl.addressbook;
 
-class Contacts {
+public class contactDetails {
 
-	private String firstName, lastName, address, city, state, email;
-	private long zip;
-	private long phoneNumber;
+	private String firstName;
+	private String lastName;
+	private String addressCity;
+	private String state;
+	private String email;
+	private String zip;
+	private String phoneNumber;
 
-	public Contacts(String firstName, String lastName, String address, String city, String state, Long zip,
-			Long phoneNumber, String email) {
+	// Declaring The Parametrised Constructor
+
+	contactDetails(String firstName, String lastName, String addressCity, String state, String email, String zip,
+			String phoneNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.address = address;
-		this.city = city;
+		this.addressCity = addressCity;
 		this.state = state;
+		this.email = email;
 		this.zip = zip;
 		this.phoneNumber = phoneNumber;
-		this.email = email;
 	}
 
 	public String getFirstName() {
+
 		return firstName;
 	}
 
@@ -27,38 +33,35 @@ class Contacts {
 	}
 
 	public String getLastName() {
+
 		return lastName;
 	}
 
 	public void setLastName(String lastName) {
+
 		this.lastName = lastName;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddressCity() {
+		return addressCity;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
+	public void setAddressCity(String addressCity) {
+		this.addressCity = addressCity;
 	}
 
 	public String getState() {
+
 		return state;
 	}
 
 	public void setState(String state) {
+
 		this.state = state;
 	}
 
 	public String getEmail() {
+
 		return email;
 	}
 
@@ -66,24 +69,33 @@ class Contacts {
 		this.email = email;
 	}
 
-	public long getZip() {
+	public String getZip() {
 		return zip;
 	}
 
-	public void setZip(long zip) {
+	public void setZip(String zip) {
+
 		this.zip = zip;
 	}
 
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
+
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
+
 		this.phoneNumber = phoneNumber;
 	}
 
+	/*
+	 * Declaring The To String Method The toString() method returns the string
+	 * representation of the object
+	 */
+	@Override
 	public String toString() {
-		return ("First name: " + firstName + " Last name: " + lastName + " Address: " + address + " city: " + city
-				+ " state: " + state + " email: " + email + " zip: " + zip + " phone number:" + phoneNumber + "");
+		return "ContactDetails{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\''
+				+ ", addressCity='" + addressCity + '\'' + ", state='" + state + '\'' + ", email='" + email + '\''
+				+ ", zip=" + zip + ", phoneNumber=" + phoneNumber + '}';
 	}
 }
