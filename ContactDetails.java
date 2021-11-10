@@ -1,108 +1,88 @@
 package com.bl.addressbook;
 
-public class contactDetails {
-    //variable Declaration
-    private String firstName;
-    private String lastName;
-    private String addressCity;
-    private String state;
-    private String email;
-    private String zip;
-    private String phoneNumber;
 
-    /*
-    Declaring The Parametrised Constructor
-    To Initialise The Parameters
-     */
-    contactDetails(String firstName, String lastName, String addressCity, String state, String email, String zip, String phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.addressCity = addressCity;
-        this.state = state;
-        this.email = email;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-    }
+import java.util.ArrayList;
 
-    public String getFirstName() {
+public abstract class ContactDetails {
+	ArrayList<String> contactDetails = new <String>ArrayList(4);
 
-        return firstName;
-    }
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String city;
+	private String state;
+	private String email;
+	private String phoneNumber;
+	private String zip;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getLastName() {
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-        return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setLastName(String lastName) {
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-        this.lastName = lastName;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public String getAddressCity() {
-        return addressCity;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public void setAddressCity(String addressCity) {
-        this.addressCity = addressCity;
-    }
+	public String getCity() {
+		return city;
+	}
 
-    public String getState() {
+	public void setCity(String city) {
+		this.city = city;
+	}
 
-        return state;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public void setState(String state) {
+	public void setState(String state) {
+		this.state = state;
+	}
 
-        this.state = state;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getEmail() {
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-        return email;
-    }
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 
-    public String getZip() {
-        return zip;
-    }
+	public String getZip() {
+		return zip;
+	}
 
-    public void setZip(String zip) {
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
 
-        this.zip = zip;
-    }
-
-    public String getPhoneNumber() {
-
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-
-        this.phoneNumber = phoneNumber;
-    }
-
-    /*
-Declaring The To String Method
-The toString() method returns the string representation of the object
- */
-    @Override
-    public String toString() {
-        return "ContactDetails{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", addressCity='" + addressCity + '\'' +
-                ", state='" + state + '\'' +
-                ", email='" + email + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "PersonDetail [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", email=" + email + ", phoneNumber=" + phoneNumber + ", zip=" + zip
+				+ "]";
+	}
 }
